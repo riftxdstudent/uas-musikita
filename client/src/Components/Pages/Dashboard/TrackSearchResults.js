@@ -1,5 +1,4 @@
-
-export default function TrackSearchResults({ track, chooseTrack }) {
+export default function TrackSearchResults({ track, key, chooseTrack }) {
 	function handlePlay() {
 		chooseTrack(track)
 	}
