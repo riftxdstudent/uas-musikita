@@ -11,6 +11,7 @@ const spotifyApi = new SpotifyWebApi({
 
 export default function Dashboard({ code }) {
 	const accessToken = UseAuth(code)
+
 	const [search, setSearch] = useState('')
 	const [searchResults, setSearchResults] = useState([])
 	const [playingTrack, setPlayingTrack] = useState()
@@ -55,12 +56,15 @@ export default function Dashboard({ code }) {
 
 	return (
 		<div className="d-flex flex-column" style={{ height: '100vh' }}>
-			<input
-				type="search"
-				placeholder="Cari lagu/penyanyi"
-				value={search}
-				onChange={e => setSearch(e.target.value)}
-			/>
+			<div class="form-floating mb-3">
+				<input
+					type="search"
+					className="form-control"
+					placeholder="Cari lagu/penyanyi"
+					value={search}
+					onChange={e => setSearch(e.target.value)} />
+				<label>Cari</label>
+			</div>
 
 			<div className="flex-grow-1" style={{ overflowY: 'auto' }}>
 				{searchResults.map(track => (
