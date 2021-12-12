@@ -56,11 +56,11 @@ export default function Dashboard({ code }) {
 
 	return (
 		<div className="d-flex flex-column" style={{ height: '100vh' }}>
-			<div class="form-floating mb-3">
+			<div class="form-floating">
 				<input
 					type="search"
 					className="form-control"
-					placeholder="Cari lagu/penyanyi"
+					placeholder=" "
 					value={search}
 					onChange={e => setSearch(e.target.value)} />
 				<label>Cari</label>
